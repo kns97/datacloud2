@@ -14,3 +14,8 @@ services:
     build: ./create_notification #/path/to
     image: create-notification
     command: python /app/create_notification.py
+
+  filter-notifications:
+    build: ./path/to/filter_notifications
+    image: filter-notifications
+    command: python /app/filter_notification.py
