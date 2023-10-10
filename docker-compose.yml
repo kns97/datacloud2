@@ -1,0 +1,16 @@
+version: '3'
+services:
+  generate-sample-data:
+    build: ./generate_sample_data.py #/path/to
+    image: generate-sample-data
+    command: python /app/generate_sample_data.py
+
+  receive-data-from-mqtt:
+    build: ./receive_data_from_mqtt #/path/to
+    image: receive-data-from-mqtt
+    command: python /app/receive_data_from_mqtt.py
+
+  create-notification:
+    build: ./create_notification #/path/to
+    image: create-notification
+    command: python /app/create_notification.py
